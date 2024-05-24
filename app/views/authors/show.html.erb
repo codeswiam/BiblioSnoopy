@@ -1,0 +1,25 @@
+<div class="author-show-outer-container">
+  <div class="author-show-container">
+    <p style="color: green"><%= notice %></p>
+
+    <div class="author-show-header">
+      <div class="show-author-header">
+        <h1 class="author-show-title"><%= @author.full_name %></h1>
+        <%= link_to "Edit this author", edit_author_path(@author), class: "author-show-action" %>
+      </div>
+      <h2>Documents</h2>
+      <ul class="author-show-documents-list">
+        <% @documents.each do |document| %>
+          <li><%= document.title %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="author-show-actions">
+      <%= link_to "Back to authors", authors_path, class: "author-show-action" %>
+      <%= button_to "Destroy this author", @author, method: :delete, class: "author-show-action destroy-btn", data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>
+
+

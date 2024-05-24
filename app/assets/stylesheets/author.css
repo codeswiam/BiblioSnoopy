@@ -1,0 +1,157 @@
+.new-author-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.new-author-container {
+    width: 75%;
+    min-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.new-author-header, .show-author-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.new-author-title {
+    margin: 0;
+}
+
+.new-author-form-container {
+    width: 100%;
+}
+
+.new-author-errors {
+    margin-bottom: 20px;
+}
+
+.new-author-errors-title {
+    margin-bottom: 10px;
+}
+
+.new-author-errors-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.new-author-form-group {
+    margin-bottom: 15px;
+}
+
+.new-author-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new-author-input {
+    width: calc(100%); /* Adjust width to respect padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.new-author-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.new-author-back-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.new-author-back-link:hover {
+    background-color: #5a6268;
+}
+
+.new-author-submit-btn {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.new-author-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.author-show-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.author-show-container {
+    width: 75%;
+    min-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.author-show-header {
+    margin-bottom: 20px;
+}
+
+.author-show-title {
+    margin: 0;
+}
+
+.author-show-documents {
+    margin-bottom: 20px;
+}
+
+.author-show-documents-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.author-show-documents-list li {
+    margin-bottom: 5px;
+}
+
+.author-show-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author-show-action {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.author-show-action:hover {
+    background-color: #0056b3;
+}
+.author-show-action.destroy-btn {
+    background-color: #dc3545; /* Red color */
+}

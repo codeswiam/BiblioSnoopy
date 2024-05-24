@@ -1,0 +1,20 @@
+<div class="document-show-outer-container">
+  <div class="document-show-container">
+    <p style="color: green"><%= notice %></p>
+
+    <div class="document-show-header">
+      <h1 class="document-show-title"><%= @document.title %></h1>
+      <%= link_to "Edit this document", edit_document_path(@document), class: "document-show-action" %>
+    </div>
+
+    <div class="document-show-details">
+      <p><strong>Type:</strong> <%= @document.doctype %></p>
+      <p><strong>Author:</strong> <%= @document.author.full_name %></p>
+    </div>
+
+    <div class="document-show-actions">
+      <%= link_to "Back to documents", documents_path, class: "document-show-action" %>
+      <%= button_to "Destroy this document", @document, method: :delete, class: "document-show-action destroy-btn", data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>

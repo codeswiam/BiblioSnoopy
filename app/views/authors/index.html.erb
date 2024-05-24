@@ -1,0 +1,20 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="header">
+    <h1>Authors</h1>
+    <%= link_to "New author", new_author_path, class: "btn" %>
+  </div>
+
+  <div id="authors" class="grid-container">
+    <% @authors.each do |author| %>
+      <div class="author" id="author-<%= author.id %>">
+        <p class="name"><%= link_to author.full_name, author_path(author) %></p>
+        <div class="delete-btn-container">
+          <%= link_to "Delete", author_path(author), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "btn delete-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

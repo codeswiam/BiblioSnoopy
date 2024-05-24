@@ -1,0 +1,29 @@
+<%= form_with(model: loan) do |form| %>
+  <% if loan.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+        <% loan.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="new-loan-form-group">
+    <%= form.label :client_id, "Select Client", class: 'new-loan-label' %>
+    <%= form.collection_select :client_id, Client.all, :id, :full_name, { prompt: "Choose a client" }, class: 'new-loan-select' %>
+  </div>
+
+  <div class="new-loan-form-group">
+    <%= form.label :document_id, "Select Book", class: 'new-loan-label' %>
+    <%= form.collection_select :document_id, Document.where(doctype: "Book"), :id, :title, { prompt: "Choose a book" }, class: 'new-loan-select' %>
+  </div>
+
+  <div class="new-loan-actions">
+    <%= link_to "Back to Loans", loans_path, class: "new-loan-back-link" %>
+    <%= form.submit 'Save Loan', class: 'new-loan-submit-btn' %>
+  </div>
+<% end %>
+

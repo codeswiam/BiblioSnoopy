@@ -1,0 +1,24 @@
+<%= form_with(model: client, local: true, html: { class: 'new-client-form' }) do |form| %>
+  <% if client.errors.any? %>
+    <div class="new-client-errors" style="color: red">
+      <h2 class="new-client-errors-title"><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul class="new-client-errors-list">
+        <% client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="new-client-form-group">
+    <%= form.label :full_name, class: 'new-client-label' %>
+    <%= form.text_field :full_name, class: 'new-client-input' %>
+  </div>
+
+  <div class="new-client-actions">
+    <%= link_to "Back to clients", clients_path, class: "new-client-back-link" %>
+    <%= form.submit 'Save Client', class: 'new-client-submit-btn' %>
+  </div>
+<% end %>
+

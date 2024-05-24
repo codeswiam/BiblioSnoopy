@@ -1,0 +1,22 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="header">
+    <h1>Clients</h1>
+    <%= link_to "New client", new_client_path, class: "btn" %>
+  </div>
+
+  <div id="clients" class="grid-container">
+    <% @clients.each do |client| %>
+      <div class="client">
+        <p class="name"><%= link_to client.full_name, edit_client_path(client) %></p>
+        <div class="delete-btn-container">
+          <%= link_to "Delete", client, method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

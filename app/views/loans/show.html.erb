@@ -1,0 +1,20 @@
+<div class="loan-show-outer-container">
+  <div class="loan-show-container">
+    <p style="color: green"><%= notice %></p>
+
+    <div class="loan-show-header">
+      <h1 class="loan-show-title">Loan Details</h1>
+      <%= link_to "Edit this loan", edit_loan_path(@loan), class: "loan-show-action" %>
+    </div>
+
+    <div class="loan-show-details">
+      <p><strong>Client:</strong> <%= @loan.client.full_name %></p>
+      <p><strong>Document:</strong> <%= @loan.document.title %></p>
+    </div>
+
+    <div class="loan-show-actions">
+      <%= link_to "Back to loans", loans_path, class: "loan-show-action" %>
+      <%= button_to "Destroy this loan", @loan, method: :delete, class: "loan-show-action destroy-btn", data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>

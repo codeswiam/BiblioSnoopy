@@ -1,0 +1,181 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.container {
+    width: 75%;
+    min-width: 400px; /* Set your desired min-width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Gap between rows */
+}
+
+.loan, .client, .document, .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border for visual separation */
+}
+
+.title,
+.client_name,
+.author_name,
+.doctype, .name {
+    margin: 0;
+    flex: 1; /* Distribute space evenly */
+}
+
+.delete-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red color for delete button */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.title a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.title a:hover {
+    text-decoration: underline;
+}
+
+.name a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.name a:hover {
+    text-decoration: underline;
+}
+
+.jumbotrons-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.jumbotrons-container {
+    text-align: center;
+    width: 75%;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+}
+
+.main-jumbotron {
+    background-color: #007BFF;
+    color: white;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.mini-jumbotrons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5%;
+}
+
+.mini-jumbotron {
+    width: 30%;
+    background-color:#f8f9fa;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+

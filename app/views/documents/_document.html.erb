@@ -1,0 +1,17 @@
+<div id="<%= dom_id document %>">
+  <p>
+    <strong>Doctype:</strong>
+    <%= document.doctype %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= document.title %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= document.author ? document.author.full_name : "Unknown Author" %>
+  </p>
+
+</div>

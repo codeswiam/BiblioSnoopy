@@ -1,0 +1,26 @@
+<%= form_with(model: author, local: true, html: { class: 'new-author-form' }) do |form| %>
+  <% if author.errors.any? %>
+    <div class="new-author-errors" style="color: red">
+      <h2 class="new-author-errors-title"><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+      <ul class="new-author-errors-list">
+        <% author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="new-author-form-group">
+    <%= form.label :full_name, class: 'new-author-label' %>
+    <%= form.text_field :full_name, class: 'new-author-input' %>
+  </div>
+
+  <div class="new-author-actions">
+    <%= link_to "Back to authors", authors_path, class: "new-author-back-link" %>
+    <%= form.submit 'Save Author', class: 'new-author-submit-btn' %>
+  </div>
+<% end %>
+
+
+

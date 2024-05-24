@@ -1,0 +1,19 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="header">
+    <h1>Loans</h1>
+    <%= link_to "New loan", new_loan_path, class: "btn" %>
+  </div>
+
+  <div id="loans">
+    <% @loans.each do |loan| %>
+      <div class="loan">
+        <p class="title"><%= loan.document.title %></p>
+        <p class="client_name"><%= loan.client.full_name %></p>
+        <%= link_to "Delete", loan, method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

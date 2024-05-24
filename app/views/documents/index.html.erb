@@ -1,0 +1,22 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="header">
+    <h1>Documents</h1>
+    <%= link_to "New document", new_document_path, class: "btn" %>
+  </div>
+
+  <div id="documents" class="grid-container">
+    <% @documents.each do |document| %>
+      <div class="document">
+        <p class="title"><%= link_to document.title, edit_document_path(document) %></p>
+        <p class="author_name"><%= document.author.full_name %></p>
+        <p class="doctype"><%= document.doctype %></p>
+        <div class="delete-btn-container">
+          <%= link_to "Delete", document, method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

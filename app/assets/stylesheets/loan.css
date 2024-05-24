@@ -1,0 +1,163 @@
+.new-loan-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.new-loan-container {
+    width: 75%;
+    min-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.new-loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.new-loan-title {
+    margin: 0;
+}
+
+.new-loan-form-container {
+    width: 100%;
+}
+
+.new-loan-errors {
+    margin-bottom: 20px;
+}
+
+.new-loan-errors-title {
+    margin-bottom: 10px;
+}
+
+.new-loan-errors-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.new-loan-form-group {
+    margin-bottom: 15px;
+}
+
+.new-loan-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.new-loan-input {
+    width: calc(100%);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.new-loan-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.new-loan-back-link {
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.new-loan-back-link:hover {
+    background-color: #5a6268;
+}
+
+.new-loan-submit-btn {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.new-loan-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.new-loan-select {
+    width: calc(100%);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Add any additional styling if needed */
+}
+
+
+
+.loan-show-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.loan-show-container {
+    width: 75%;
+    min-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.loan-show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.loan-show-title {
+    margin: 0;
+}
+
+.loan-show-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.loan-show-action {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.loan-show-action:hover {
+    background-color: #0056b3;
+}
+
+.loan-show-action.destroy-btn {
+    background-color: #dc3545; /* Red color */
+}
+
+.loan-show-details {
+    margin-bottom: 20px;
+}

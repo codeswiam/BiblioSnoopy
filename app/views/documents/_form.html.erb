@@ -1,0 +1,36 @@
+<%= form_with(model: document, html: { class: 'new-document-form' }) do |form| %>
+  <% if document.errors.any? %>
+    <div class="new-document-errors">
+      <h2 class="new-document-errors-title"><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul class="new-document-errors-list">
+        <% document.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="new-document-form-group">
+    <%= form.label :doctype, "Select Document Type:", class: 'new-document-label' %>
+    <%= form.select :doctype, ['Book', 'Dictionary', 'Review', 'Comics', 'Poem'], {}, class: 'new-document-select' %>
+  </div>
+
+  <div class="new-document-form-group">
+    <%= form.label :title, "Document Title", class: 'new-document-label'%>
+    <%= form.text_field :title, class: 'new-document-input' %>
+  </div>
+
+  <div class="new-document-form-group">
+    <%= form.label :author_id, "Select Document Author", class: 'new-document-label' %>
+    <%= form.collection_select :author_id, Author.all, :id, :full_name, { prompt: "Choose an author" }, { class: 'new-document-input' } %>
+  </div>
+
+  <!-- Add other fields here -->
+
+  <div class="new-document-actions">
+    <%= link_to "Back to documents", documents_path, class: "new-document-back-link" %>
+    <%= form.submit 'Save Document', class: 'new-document-submit-btn' %>
+  </div>
+<% end %>
+

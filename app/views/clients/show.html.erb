@@ -1,0 +1,15 @@
+<div class="client-show-outer-container">
+  <div class="client-show-container">
+    <p style="color: green"><%= notice %></p>
+
+    <div class="client-show-header">
+      <h1 class="client-show-title"><%= @client.full_name %></h1>
+      <%= link_to "Edit this client", edit_client_path(@client), class: "client-show-action" %>
+    </div>
+
+    <div class="client-show-actions">
+      <%= link_to "Back to clients", clients_path, class: "client-show-action" %>
+      <%= button_to "Destroy this client", @client, method: :delete, class: "client-show-action destroy-btn", data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+</div>
